@@ -22,6 +22,7 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 
 ## 🛠️ Tecnologias Utilizadas
 
+<<<<<<< HEAD
 - **Python 3.x**
 - **NumPy**, **SciPy**, **SymPy**, **PuLP**
 - **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
@@ -33,22 +34,46 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 
 ## 📂 Estrutura do Projeto
 
+=======
+- **Python**
+- **NumPy**, **SciPy**, **SymPy**, **PuLP**
+- **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
+- **Jupyter Notebook** / **VS Code**
+- **yfinance** (coleta de dados)
+- **SQLite/PostgreSQL** (opcional para persistência de dados)
+>>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
 
 ---
 
 ## 👨‍💻 Integrantes do Grupo
 
+<<<<<<< HEAD
 - Murilo  
 - Gustavo  
 - Kaua  
 - Rodrigo  
+=======
+- Murilo
+- Gustavo
+- Kaua
+- Rodrigo
+>>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
 - Pedro
 
 ---
 
+<<<<<<< HEAD
 ## 📌 Requisitos Acadêmicos Atendidos
 
 - ✅ Definição e modelagem matemática do problema
 - ✅ Implementação em Python com bibliotecas especializadas
 - ✅ Técnicas de otimização e análise de dados
 - ✅ Visualização de resultados e apoio à decisão
+=======
+## 📚 Requisitos Acadêmicos Atendidos
+
+- Modelagem matemática com variáveis, equações e restrições
+- Implementação em Python com bibliotecas matemáticas
+- Técnicas de otimização e simulação de cenários
+- Visualização e análise dos resultados para tomada de decisão
+>>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
