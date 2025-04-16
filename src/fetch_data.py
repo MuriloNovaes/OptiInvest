@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-def obter_precos(tickers, inicio='2022-01-01', fim='2024-01-01'):
+def obter_precos(tickers, inicio='2023-01-01', fim='2024-01-01'):
     """
     Obtém dados históricos de preços das ações fornecidas.
 
