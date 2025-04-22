@@ -10,37 +10,39 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 
 ---
 
-## 🧠 Funcionalidades
+⚙️ Funcionalidades Implementadas
+📥 Coleta de dados históricos de ações com yfinance
 
-- Otimização de portfólios com o Modelo de Markowitz
-- Programação linear com restrições de risco e retorno
-- Análise de séries temporais com dados financeiros reais
-- Simulação de diferentes cenários e perfis de investidores
-- Visualização de resultados com gráficos interativos
+🧹 Limpeza e tratamento de dados
+
+📊 Cálculo dos retornos diários
+
+👀 Visualização resumida dos dados
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+🧰 Tecnologias Utilizadas
+Python 3.13
 
-<<<<<<< 
-- **Python 3.x**
-- **NumPy**, **SciPy**, **SymPy**, **PuLP**
-- **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
-- **Jupyter Notebook**, **VS Code**
-- **yfinance** (coleta de dados)
-- **SQLite** ou **PostgreSQL** (opcional)
+yfinance
+
+pandas
+
+matplotlib (em breve para gráficos)
 
 ---
 
 ## 📂 Estrutura do Projeto
+optinvest/
+│
+├── main.py                     # Arquivo principal para execução
+├── README.md                   # Documentação do projeto
+├── .gitignore                  # Arquivos ignorados no versionamento
+└── src/
+    ├── fetch_data.py           # Coleta de dados das ações
+    ├── data_processing.py      # Limpeza e cálculo de retornos
+    └── utils.py                # Funções auxiliares (como ver_resumo)
 
-=======
-- **Python**
-- **NumPy**, **SciPy**, **SymPy**, **PuLP**
-- **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
-- **Jupyter Notebook** / **VS Code**
-- **yfinance** (coleta de dados)
-- **SQLite/PostgreSQL** (opcional para persistência de dados)
 >>>>>>> 
 
 ---
