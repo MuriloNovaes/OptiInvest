@@ -1,3 +1,4 @@
+
 # 📈 OptInvest
 
 **OptInvest** é uma aplicação em Python que realiza alocação otimizada de investimentos utilizando o Modelo de Markowitz, programação linear e análise de séries temporais. O projeto busca ajudar bancos e fintechs a definirem carteiras que equilibrem risco e retorno para seus clientes.
@@ -10,59 +11,47 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 
 ---
 
-## 🧠 Funcionalidades
+⚙️ Funcionalidades Implementadas
+📥 Coleta de dados históricos de ações com yfinance
 
-- Otimização de portfólios com o Modelo de Markowitz
-- Programação linear com restrições de risco e retorno
-- Análise de séries temporais com dados financeiros reais
-- Simulação de diferentes cenários e perfis de investidores
-- Visualização de resultados com gráficos interativos
+🧹 Limpeza e tratamento de dados
 
----
+📊 Cálculo dos retornos diários
 
-## 🛠️ Tecnologias Utilizadas
-
-<<<<<<< HEAD
-- **Python 3.x**
-- **NumPy**, **SciPy**, **SymPy**, **PuLP**
-- **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
-- **Jupyter Notebook**, **VS Code**
-- **yfinance** (coleta de dados)
-- **SQLite** ou **PostgreSQL** (opcional)
+👀 Visualização resumida dos dados
 
 ---
 
-## 📂 Estrutura do Projeto
+🧰 Tecnologias Utilizadas
+Python 3.13
 
-=======
-- **Python**
-- **NumPy**, **SciPy**, **SymPy**, **PuLP**
-- **Pandas**, **Matplotlib**, **Seaborn**, **Plotly**
-- **Jupyter Notebook** / **VS Code**
-- **yfinance** (coleta de dados)
-- **SQLite/PostgreSQL** (opcional para persistência de dados)
->>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
+yfinance
+
+pandas
+
+matplotlib (em breve para gráficos)
+
+---
+
+
+>>>>>>> 
 
 ---
 
 ## 👨‍💻 Integrantes do Grupo
 
-<<<<<<< HEAD
-- Murilo  
-- Gustavo  
-- Kaua  
-- Rodrigo  
-=======
-- Murilo
-- Gustavo
-- Kaua
-- Rodrigo
->>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
-- Pedro
+<<<<<<< 
+- Murilo Novaes
+- Gustavo Mattos
+- Kaua Santos
+- Rodrigo Illydio
+- Pedro Benevides
 
+>>>>>>>
+-
 ---
 
-<<<<<<< HEAD
+<<<<<<< 
 ## 📌 Requisitos Acadêmicos Atendidos
 
 - ✅ Definição e modelagem matemática do problema
@@ -76,4 +65,16 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 - Implementação em Python com bibliotecas matemáticas
 - Técnicas de otimização e simulação de cenários
 - Visualização e análise dos resultados para tomada de decisão
->>>>>>> d468c4b488a235582ac25c4e0fe5603a17a34cc5
+>>>>>>>
+
+## 📁 Estrutura do Projeto
+```bash
+
+optinvest/
+├── main.py                 # Arquivo principal para execução
+├── README.md               # Documentação do projeto
+├── .gitignore              # Ignora arquivos como __pycache__ no Git
+└── src/                    # Pasta com os módulos do projeto
+    ├── fetch_data.py       # Baixa os dados com yfinance
+    ├── data_processing.py  # Processa os dados (limpeza e retornos)
+    └── utils.py            # Funções auxiliares (ex: ver_resumo)
