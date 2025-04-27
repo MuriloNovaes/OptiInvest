@@ -26,7 +26,11 @@ def analise_risco_retorno(retornos):
     - DataFrame com métricas de cada ação. 
     """
     analise = pd.DataFrame({
-        'Retorno Médio (%)': retornos.mean() * 100,
-        'Volatilidade (%)': retornos.std() * 100 # Riscp (desvio padrão) 
+        'Retorno Médio': retornos.mean() * 100,
+        'Volatilidade': retornos.std() * 100 # Risco (desvio padrão) 
     })
-    return analise.sort_values(by='Retorno Médio (%)', ascending=False)
+    # Formata como string com % e 2 casas decimais
+    analise['Retorno Médio'] = analise['Retorno Médio'].map('{:.2f}%'.format)
+    analise['Volatilidade'] = analise['Volatilidade'].map('{:.2f}%'.format)
+
+    return analise.sort_values(by='Retorno Médio', ascending=False)
