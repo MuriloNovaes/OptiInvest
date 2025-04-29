@@ -12,13 +12,6 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 ---
 
 ⚙️ Funcionalidades Implementadas
-📥 Coleta de dados históricos de ações com yfinance
-
-🧹 Limpeza e tratamento de dados
-
-📊 Cálculo dos retornos diários
-
-👀 Visualização resumida dos dados
 
 ---
 
@@ -29,7 +22,7 @@ yfinance
 
 pandas
 
-matplotlib (em breve para gráficos)
+Flask
 
 ---
 
@@ -68,13 +61,4 @@ matplotlib (em breve para gráficos)
 >>>>>>>
 
 ## 📁 Estrutura do Projeto
-```bash
 
-optinvest/
-├── main.py                 # Arquivo principal para execução
-├── README.md               # Documentação do projeto
-├── .gitignore              # Ignora arquivos como __pycache__ no Git
-└── src/                    # Pasta com os módulos do projeto
-    ├── fetch_data.py       # Baixa os dados com yfinance
-    ├── data_processing.py  # Processa os dados (limpeza e retornos)
-    └── utils.py            # Funções auxiliares (ex: ver_resumo)
