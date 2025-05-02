@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.optimize import minimaze
+from scipy.optimize import minimize
 
 def optimize_portfolio(returns, cov_matrix, risk_profile="moderado"):
     """
@@ -38,7 +38,7 @@ def optimize_portfolio(returns, cov_matrix, risk_profile="moderado"):
             return -retorno / risco # Queremos maximizar o índice de Sharpe
         
     # Otimização
-    resultado = minimaze(
+    resultado = minimize(
         objetivo,
         pesos_iniciais,
         method='SLSQP',
@@ -46,3 +46,11 @@ def optimize_portfolio(returns, cov_matrix, risk_profile="moderado"):
         constraints=constraints 
     )
     return resultado.x 
+
+"""if __name__ == "__main__":
+    # Dados de exemplo
+    returns = np.array([0.12, 0.18])  # PETR4 e VALE3
+    cov_matrix = np.array([[0.04, 0.02], [0.02, 0.09]])
+    
+    pesos = optimize_portfolio(returns, cov_matrix, "moderado")
+    print("Pesos otimizados:", pesos)"""
