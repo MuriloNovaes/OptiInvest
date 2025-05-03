@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optiinvest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <p>Otimização de Carteira</p>
+        </div>
+        <nav>
+            <a href="">Início</a>
+            <a href="">Sobre</a>
+            <a href="">Simular</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>Otimização de Carteira de Investimentos</h1>
+        <p>Maximize retornos e minimize riscos usando modelagem matemática avançada</p>
+        <button id="c">Começar Simulação</button>
+    </div>
+    <div id="sobre">
+        <h2>Sobre o Projeto</h2>
+        <div id="infos">
+            <div class="info">
+                <h3>Eficiência</h3>
+                <p>Alocar recursos de maneira eficiente e otimizada</p>
+            </div>
+            <div class="info">
+                <h3>Segurança</h3>
+                <p>Equilibrar retorno esperado e nível de risco</p>
+            </div>
+            <div class="info">
+                <h3>Análise</h3>
+                <p>Aplicar técnicas quantitativas para decisões fundamentadas</p>
+            </div>
+        </div>
+    </div>
+    <div id="inserir">
+
+        <h2>Simulação Rápida</h2>
+
+        <form action="/action_page.php">
+
+            <label for="capital">Capital Disponível</label>
+            <input type="text" id="capital" name="capital">
+            
+            <div id="input-row">
+                <label for="niveis">Tolerância a Risco</label>
+                <select name="niveis" id="niveis">
+                    <option value="Leve">Leve</option>
+                    <option value="Moderada">Moderada</option>
+                    <option value="Grave">Grave</option>
+                </select>
+            
+                <label for="retorno">Retorno Esperado Mínimo</label>
+                <input type="text" id="retorno" name="retorno">
+            </div>
+            
+            <button id="s">Simular</button>
+
+        </form>
+
+    </div>
+    <p>Desenvolvido pelos alunos do 3º semestre</p>
+</body>
+</html>
