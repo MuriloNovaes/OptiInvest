@@ -17,6 +17,13 @@ header {
     width: 99%;
 }
 
+
+p {
+    font-size: 18px;
+    text-align: center;
+    max-height: 40px;
+}
+
 #logo {
     position: left;
 }
@@ -65,6 +72,20 @@ button:hover {
     flex-direction: column;
 }
 
+#intro {
+    margin-bottom: 65px;
+}
+
+#intro p {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+}
+
+
 #infos {
     display: flex;
     flex-direction: row;
@@ -89,6 +110,24 @@ div {
     flex-direction: row;
 }
 
-#inserir {
-    
+img {
+    width: 70px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    width: 500px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+#sobre h2 {
+    margin-bottom: -20px;
+}
+
+#seguranca {
+    margin: -2px;
 }
