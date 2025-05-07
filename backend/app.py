@@ -10,7 +10,7 @@ CORS(app)
 @app.route('/api/optimize', methods=['POST'])
 def optimize():
     try:
-        # 1. Recebe dados do frontend...
+        # 1. Recebe dados do frontend....
         user_data = request.json
         tickers = user_data.get('tickers', ['PETR4.SA', 'VALE3.SA', 'ITUB4.SA'])
         risk_profile = user_data.get('risk_profile', 'moderado')
