@@ -8,7 +8,7 @@ import numpy as np
 app = Flask(__name__)
 CORS(app)  # Permite requisições do frontend
 
-@app.route('/api/optimize', methods=['POST'])
+@app.route('/api/optimize', methods=['POST','GET'])
 def optimize():
     """
     Rota principal que recebe os dados do frontend e retorna a alocação otimizada.
@@ -32,7 +32,21 @@ def optimize():
     }
     """
     try:
-        # 1. Valida e extrai dados da requisição
+        
+        # Se for GET, retorna dados de exemplo sem processar
+        if request.method == 'GET':
+            return jsonify({
+                "success": True,
+                "allocation": {
+                    "PETR4.SA": {"peso": 45.5, "valor": 4550.0},
+                    "VALE3.SA": {"peso": 32.5, "valor": 3210.0}
+                },
+                "expected_return": 12.5,
+                "risk": 10.2,
+                "message": "Dados de exemplo(use POST para otimização real)"
+            })
+        
+        # 1.(POST) Valida e extrai dados da requisição
         user_data = request.json
         
         if not user_data or 'capital' not in user_data:
