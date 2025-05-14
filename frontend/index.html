@@ -1,73 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optiinvest</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div id="logo">
-            <p>Otimização de Carteira</p>
+            <img src="./assets/unifecaf-logo-white.png" alt="UniFECAF logo">
         </div>
         <nav>
-            <a href="">Início</a>
-            <a href="">Sobre</a>
-            <a href="">Simular</a>
+            <ul class="nav-items">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#simulacao-box">Simular</a>
+            </ul>
         </nav>
     </header>
-    <div id="intro">
+    <div id="inicio">
         <h1>Otimização de Carteira de Investimentos</h1>
         <p>Maximize retornos e minimize riscos usando modelagem matemática avançada</p>
-        <button id="c">Começar Simulação</button>
+        <a href="#simulacao-box" id="c">Começar Simulação</a>
     </div>
     <div id="sobre">
         <h2>Sobre o Projeto</h2>
         <div id="infos">
             <div class="info">
-                <img src="imgs/eficiencia.png" alt="">
+                <img src="./assets/eficiencia.png" alt="Ícone de Eficiência">
                 <h3>Eficiência</h3>
-                <p>Alocar recursos de maneira eficiente e otimizada</p>
+                <p>Alocar recursos de maneira eficiente e otimizada.</p>
             </div>
             <div class="info">
-                <img src="imgs/seguranca.png" alt="" id="seguranca">
+                <img src="./assets/seguranca.png" alt="Ícone de Segurança">
                 <h3>Segurança</h3>
-                <p>Equilibrar retorno esperado e nível de risco</p>
+                <p>Equilibrar o retorno esperado e o nível de risco.</p>
             </div>
             <div class="info">
-                <img src="imgs/analise.png" alt="">
+                <img src="./assets/analise (1).png" alt="Ícone de Análise">
                 <h3>Análise</h3>
-                <p>Aplicar técnicas quantitativas para decisões fundamentadas</p>
+                <p>Aplicar técnicas quantitativas para decisões fundamentadas.</p>
             </div>
         </div>
     </div>
-    <div id="inserir">
 
+    <div id="simulacao-box">
         <h2>Simulação Rápida</h2>
 
-        <form action="/action_page.php">
-
-            <label for="capital">Capital Disponível</label>
-            <input type="text" id="capital" name="capital">
-            
+        <form class="form-simulação">
+            <p>Capital (R$50 - R$100.000)</p>
+            <input type="text" id="capital" name="capital" placeholder="R$ 100000">
             <div id="input-row">
-                <label for="niveis">Tolerância a Risco</label>
-                <select name="niveis" id="niveis">
-                    <option value="Leve">Leve</option>
-                    <option value="Moderada">Moderada</option>
-                    <option value="Grave">Grave</option>
-                </select>
-            
-                <label for="retorno">Retorno Esperado Mínimo</label>
-                <input type="text" id="retorno" name="retorno">
+                <div class="input-group">
+                    <p>Tolerancia à Risco</p>
+                    <select name="niveis" id="niveis">
+                        <option value="Leve">Leve</option>
+                        <option value="Moderada">Moderada</option>
+                        <option value="Grave">Grave</option>
+                    </select>
+                    <p>Empresa à Investir</p>
+                    <div class="input-group">
+                        <select name="" id="">
+                            <option value="Petrobras">Petrobras</option>
+                            <option value="Itau">Itaú</option>
+                        </select>       
+                    </div>
+                    <div id="retorno" class="input-group">
+                        <p>Retorno Esperado Mínimo</p>
+                        <input type="text" id="retorno" name="retorno" placeholder="%">
+                    </div>
+                </div>
+
+
             </div>
-            
-            <button id="s">Simular</button>
-
         </form>
-
+        <div id="grafico-box">
+            <img src="assets/graf.png" alt="" class="exemplo">
+        </div>
+            <img src="assets/coin.png" alt="" class="exemplo">
+        <a href="#" id="s">Simular</a>
     </div>
-    <p>Desenvolvido pelos alunos do 3º semestre</p>
+
+    <p class="footer">
+        <i>Desenvolvido por: Kauã Santos, Gustavo Mattos, Murilo Barbosa, Rodrigo Illydio e Pedro Benevides </i>
+    </p>
+    <script src="script.js"></script>
 </body>
+
 </html>
