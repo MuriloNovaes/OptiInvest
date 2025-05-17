@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optiinvest</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <div id="logo">
@@ -46,35 +44,31 @@
             </div>
         </div>
     </div>
-
     <div id="simulacao-box">
         <h2>Simulação Rápida</h2>
-
         <form class="form-simulação">
-            <p>Capital (R$50 - R$100.000)</p>
-            <input type="text" id="capital" name="capital" placeholder="R$ 100000">
-            <div id="input-row">
-                <div class="input-group">
-                    <p>Tolerancia à Risco</p>
-                    <select name="niveis" id="niveis">
-                        <option value="Leve">Leve</option>
-                        <option value="Moderada">Moderada</option>
-                        <option value="Grave">Grave</option>
-                    </select>
-                    <p>Empresa à Investir</p>
-                    <div class="input-group">
-                        <select name="" id="">
-                            <option value="Petrobras">Petrobras</option>
-                            <option value="Itau">Itaú</option>
-                        </select>       
-                    </div>
-                    <div id="retorno" class="input-group">
-                        <p>Retorno Esperado Mínimo</p>
-                        <input type="text" id="retorno" name="retorno" placeholder="%">
-                    </div>
-                </div>
-
-
+            <div class="input-group">
+                <p>Capital (R$50 - R$100.000)</p>
+                <input type="text" id="capital" name="capital" placeholder="R$ 100000">
+            </div>
+            <div class="input-group">
+                <p>Tolerancia à Risco</p>
+                <select name="niveis" id="niveis">
+                    <option value="Leve">Leve</option>
+                    <option value="Moderada">Moderada</option>
+                    <option value="Grave">Grave</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <p>Empresa à Investir</p>
+                <select name="" id="">
+                    <option value="Petrobras">Petrobras</option>
+                    <option value="Itau">Itaú</option>
+                </select>       
+            </div>
+            <div id="retorno" class="input-group">
+                <p>Retorno Esperado Mínimo</p>
+                <input type="text" id="retorno" name="retorno" placeholder="%">
             </div>
         </form>
         <div id="grafico-box">
@@ -83,11 +77,9 @@
             <img src="assets/coin.png" alt="" class="exemplo">
         <a href="#" id="s">Simular</a>
     </div>
-
     <p class="footer">
         <i>Desenvolvido por: Kauã Santos, Gustavo Mattos, Murilo Barbosa, Rodrigo Illydio e Pedro Benevides </i>
     </p>
     <script src="script.js"></script>
 </body>
-
 </html>
