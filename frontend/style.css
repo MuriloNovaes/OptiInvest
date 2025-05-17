@@ -126,7 +126,7 @@ button {
   font-size: 15px;
   text-decoration: none;
   transition: 0.3s;
-  margin-top: 60px;
+  margin: 60px 0 40px 0;
 }
 
 #s:hover, #c:hover {
