@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const capitalInput = document.getElementById('capital').value.replace(/\D/g, '');
         const capital = parseFloat(capitalInput);
         const risco = document.getElementById('niveis').value.toLowerCase(); // "leve", "moderada", "grave"
-        const empresa = document.getElementById('empresa').value;
+        const empresa = document.getElementById('empresa').value.trim();
 
         if (!capital || capital <= 0) {
             alert('Por favor, insira um capital válido.');
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/optimize', {
-                method: 'GET',
+            const response = await fetch('http://127.0.0.1:5000/api/optimize', {
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
