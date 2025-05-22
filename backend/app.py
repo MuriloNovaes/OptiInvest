@@ -3,10 +3,38 @@ from flask_cors import CORS
 from services.data_service import fetch_br_stocks, calculate_returns
 from services.analysis_services import optimize_portfolio
 import numpy as np
+import pandas as pd
+import yfinance as yf
+
 
 # Configuração básica do Flask
 app = Flask(__name__)
 CORS(app)  # Permite requisições do frontend
+
+
+def fetch_br_stocks(tickers):
+    # Garante que é uma lista de strings
+    if isinstance(tickers, str):
+        tickers = [tickers]
+    if isinstance(tickers, list) and len(tickers) == 1 and isinstance(tickers[0], list):
+        tickers = tickers[0]
+
+    print("🎯 Tickers processados:", tickers)
+
+    # Faz o download com yfinance
+    data = yf.download(tickers, period="1y", interval="1d", auto_adjust=False, group_by='ticker')
+
+    # Verifica se é 1 ou mais tickers e extrai corretamente os preços de fechamento ajustado
+    if len(tickers) == 1:
+        df = data['Adj Close'].to_frame()
+        df.columns = [tickers[0]]
+        return df.dropna()
+    else:
+        return data['Adj Close'].dropna()
+def calculate_returns(prices):
+    daily_returns = prices.pct_change().dropna()
+    mean_returns = daily_returns.mean() * 252  # Retorno médio anualizado
+    return mean_returns.values  # <- retorna como array, não Series
 
 @app.route('/api/optimize', methods=['POST','GET'])
 def optimize():
@@ -57,14 +85,23 @@ def optimize():
             return jsonify({"success": False, "error": "Capital deve ser positivo"}), 400
 
         tickers = user_data.get('tickers', ['PETR4.SA', 'VALE3.SA', 'ITUB4.SA'])
+                # Corrige caso venha string única
+        if isinstance(tickers, str):
+            tickers = [tickers]
+        # Corrige se vier como lista dentro de lista
+        if isinstance(tickers, list) and len(tickers) == 1 and isinstance(tickers[0], list):
+            tickers = tickers[0]
         risk_profile = user_data.get('risk_profile', 'moderado')
 
         # 2. Busca e processa dados
         prices = fetch_br_stocks(tickers)
         returns = calculate_returns(prices)
         cov_matrix = prices.pct_change().cov() * 252  # Anualizada
+        
+        
 
         # 3. Otimização
+        
         weights = optimize_portfolio(returns, cov_matrix, risk_profile)
 
         # 4. Formata resposta
@@ -88,6 +125,7 @@ def optimize():
         })
 
     except Exception as e:
+        print(e)
         return jsonify({
             "success": False,
             "error": f"Erro interno: {str(e)}"
