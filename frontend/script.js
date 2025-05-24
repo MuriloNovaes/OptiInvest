@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     const simularBtn = document.getElementById('s');
+    const capitalInput = document.getElementById('capital');
+
+    // Máscara de moeda
+    capitalInput.addEventListener('input', function (e) {
+        let rawValue = e.target.value.replace(/\D/g, '');
+        if (rawValue.length > 8) rawValue = rawValue.slice(0, 8);
+        let numericValue = parseInt(rawValue || '0', 10);
+        if (numericValue > 10000000) numericValue = 10000000;
+
+        let formatted = (numericValue / 100).toFixed(2) + '';
+        formatted = formatted.replace('.', ',');
+        formatted = formatted.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        e.target.value = 'R$ ' + formatted;
+    });
 
     simularBtn.addEventListener('click', async function (e) {
         e.preventDefault();
 
-        // Coleta os dados do formulário
-        const capitalInput = document.getElementById('capital').value.replace(/\D/g, '');
-        const capital = parseFloat(capitalInput);
-        const risco = document.getElementById('niveis').value.toLowerCase(); // "leve", "moderada", "grave"
-        const empresa = document.getElementById('empresa').value.trim();
+        const capitalRaw = document.getElementById('capital').value.replace(/\D/g, '');
+        const capital = parseFloat(capitalRaw);
+        const risco = document.getElementById('risk_profile').value.toLowerCase();
 
         if (!capital || capital <= 0) {
             alert('Por favor, insira um capital válido.');
@@ -17,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const payload = {
             capital: capital,
-            risk_profile: risco,
-            tickers: [empresa]
+            risk_profile: risco
         };
 
         try {
@@ -33,15 +44,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
 
             if (data.success) {
-                console.log('Resultado da simulação:', data);
+                const distribuicao = data.allocation.map(item =>
+                    `${item.ticker}: ${item.peso_percentual}% (R$ ${item.valor_investido.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})})`
+                ).join('\n');
 
                 alert(
                     `Simulação realizada!\n\n` +
-                    `Empresa: ${empresa}\n` +
-                    `Peso: ${data.allocation[empresa].peso}%\n` +
-                    `Valor investido: R$${data.allocation[empresa].valor}\n` +
+                    `Valor investido: R$ ${data.valor_total_investido}\n` +
                     `Retorno esperado: ${data.expected_return}%\n` +
-                    `Risco: ${data.risk}%`
+                    `Risco: ${data.risk}%\n\n` +
+                    `Melhores ações: ${data.melhores_acoes.join(', ')}\n\n` +
+                    `Distribuição:\n${distribuicao}`
                 );
             } else {
                 alert(`Erro: ${data.error}`);
