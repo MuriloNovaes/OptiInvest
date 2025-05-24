@@ -62,6 +62,9 @@ Cors
 - ✅ Implementação em Python com bibliotecas especializadas
 - ✅ Técnicas de otimização e análise de dados
 - ✅ Visualização de resultados e apoio à decisão
+- ✅ Retornos esperados (vetor de retorno)
+- ✅ Matriz de covariância (risco entre ativos)
+- ✅ Restrições de perfil de risco (ajustando o nível de tolerância)
 =======
 ## 📚 Requisitos Acadêmicos Atendidos
 
