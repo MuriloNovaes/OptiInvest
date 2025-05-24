@@ -2,11 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const simularBtn = document.getElementById('s');
     const capitalInput = document.getElementById('capital');
 
-    // Máscara de moeda
     capitalInput.addEventListener('input', function (e) {
         let rawValue = e.target.value.replace(/\D/g, '');
+
         if (rawValue.length > 8) rawValue = rawValue.slice(0, 8);
         let numericValue = parseInt(rawValue || '0', 10);
+
         if (numericValue > 10000000) numericValue = 10000000;
 
         let formatted = (numericValue / 100).toFixed(2) + '';
@@ -18,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     simularBtn.addEventListener('click', async function (e) {
         e.preventDefault();
 
-        const capitalRaw = document.getElementById('capital').value.replace(/\D/g, '');
+        const capitalElement = document.getElementById('capital');
+        const capitalRaw = capitalElement.value.replace(/\D/g, '');
         const capital = parseFloat(capitalRaw);
         const risco = document.getElementById('risk_profile').value.toLowerCase();
 
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 alert(
                     `Simulação realizada!\n\n` +
-                    `Valor investido: R$ ${data.valor_total_investido}\n` +
+                    `Valor investido: ${capitalElement.value}\n` +
                     `Retorno esperado: ${data.expected_return}%\n` +
                     `Risco: ${data.risk}%\n\n` +
                     `Melhores ações: ${data.melhores_acoes.join(', ')}\n\n` +
