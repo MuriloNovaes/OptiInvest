@@ -72,4 +72,15 @@ Cors
 >>>>>>>
 
 ## 📁 Estrutura do Projeto
+.
+├── app.py
+├── services/
+│   ├── static_data.py
+│   └── analysis_services.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── script.js
+├── README.md
+└── requirements.txt
 
