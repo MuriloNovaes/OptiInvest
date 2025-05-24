@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optiinvest</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div id="logo">
@@ -49,7 +51,7 @@
         <form class="form-simulação">
             <div class="input-group">
                 <p>Capital (R$50 - R$100.000)</p>
-                <input type="text" id="capital" name="capital" placeholder="R$ 100000">
+                <input type="text" id="capital" name="capital" placeholder="ex.: R$ 1.000,00">
             </div>
 
             <div class="input-group" id="empresa">
@@ -58,24 +60,26 @@
             <div class="input-group">
                 <p>Tolerância à Risco</p>
                 <select name="niveis" id="risk_profile">
-                    <option value="conservador">Leve</option>
-                    <option value="moderado">Moderada</option>
-                    <option value="agressivo">Grave</option>
+                    <option value="conservador">Conservador</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="agressivo">Agresivo</option>
                 </select>
             </div>
-             <div id="retorno" class="input-group">
+            <div id="retorno" class="input-group">
             </div>
         </form>
         <div id="grafico-box">
             <img src="assets/graf.png" alt="" class="exemplo">
         </div>
-            <img src="assets/coin.png" alt="" class="exemplo">
+        <img src="assets/coin.png" alt="" class="exemplo">
         <a href="#" id="s">Simular</a>
-        <p>ATENÇÃO! Esse é um projeto universitário baseado apenas em cálculos matemáticos. Sempre pesquise bem e consulte um especialista antes de investir seu dinheiro!</p>
+        <p>ATENÇÃO! Esse é um projeto universitário baseado apenas em cálculos matemáticos. Sempre pesquise bem e
+            consulte um especialista antes de investir seu dinheiro!</p>
     </div>
     <p class="footer">
         <i>Desenvolvido por: Kauã Santos, Gustavo Mattos, Murilo Barbosa, Rodrigo Illydio e Pedro Benevides </i>
     </p>
     <script src="script.js"></script>
 </body>
+
 </html>
