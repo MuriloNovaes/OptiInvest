@@ -129,7 +129,8 @@ button {
   margin: 60px 0 40px 0;
 }
 
-#s:hover, #c:hover {
+#s:hover,
+#c:hover {
   cursor: pointer;
   background-color: transparent;
   color: rgb(21, 21, 76);
@@ -148,7 +149,8 @@ button {
   flex-direction: column;
 }
 
-#sobre, #simular {
+#sobre,
+#simular {
   margin-top: -220px;
 }
 
@@ -263,9 +265,10 @@ select {
   margin-left: -20px;
 }
 
-.input-group input, select {
+.input-group input,
+select {
   flex: 1;
-  width: 270px
+  width: 270px;
 }
 
 .exemplo {
@@ -288,4 +291,13 @@ div {
 .footer {
   margin: 30px;
   font-size: 20px;
+}
+
+.images-simular {
+  display: flex;
+}
+
+.images-simular img {
+  object-fit: cover;
+  width: 100px;
 }
