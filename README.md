@@ -18,9 +18,17 @@ Desenvolver uma solução matemática-computacional para o problema de alocaçã
 🧰 Tecnologias Utilizadas
 Python 3.13
 
-yfinance
+HTML
 
-pandas
+CSS
+
+JavaScript
+
+Numpy
+
+minimize
+
+Pandas
 
 Flask
 
