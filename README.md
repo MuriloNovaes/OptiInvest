@@ -26,11 +26,14 @@ JavaScript
 
 Numpy
 
-minimize
+SciPy
 
 Pandas
 
 Flask
+
+Cors
+
 
 ---
 
