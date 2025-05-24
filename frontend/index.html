@@ -51,24 +51,19 @@
                 <p>Capital (R$50 - R$100.000)</p>
                 <input type="text" id="capital" name="capital" placeholder="R$ 100000">
             </div>
+
+            <div class="input-group" id="empresa">
+            </div>
+
             <div class="input-group">
-                <p>Tolerancia à Risco</p>
-                <select name="niveis" id="niveis">
-                    <option value="Leve">Leve</option>
-                    <option value="Moderada">Moderada</option>
-                    <option value="Grave">Grave</option>
+                <p>Tolerância à Risco</p>
+                <select name="niveis" id="risk_profile">
+                    <option value="conservador">Leve</option>
+                    <option value="moderado">Moderada</option>
+                    <option value="agressivo">Grave</option>
                 </select>
             </div>
-            <div class="input-group">
-                <p>Empresa à Investir</p>
-                <select name="" id="">
-                    <option value="Petrobras">Petrobras</option>
-                    <option value="Itau">Itaú</option>
-                </select>       
-            </div>
-            <div id="retorno" class="input-group">
-                <p>Retorno Esperado Mínimo</p>
-                <input type="text" id="retorno" name="retorno" placeholder="%">
+             <div id="retorno" class="input-group">
             </div>
         </form>
         <div id="grafico-box">
