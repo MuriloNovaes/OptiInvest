@@ -72,5 +72,6 @@ Cors
 >>>>>>>
 
 ## 📁 Estrutura do Projeto
-![image](https://github.com/user-attachments/assets/e2fedbff-2204-4709-8779-74d9f81c03f8)
+![image](https://github.com/user-attachments/assets/37ba6a9a-3481-4432-a1b9-4a50794deecc)
+
 
